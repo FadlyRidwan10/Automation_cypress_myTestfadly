@@ -30,15 +30,15 @@ it('Batal', () => {
     
 });
 
-it('Batal clik luar modal', () => {
+it.only('Batal clik luar modal', () => {
 
     cy.visit('https://ivan-todo-devrank.netlify.app');
 
     cy.get(':nth-child(1) > [data-cy="activity-item"] > .card-footer > [data-cy="activity-item-delete-button"]').click();
 
     cy.wait(4000);
-    // cy.get('.app').click()
-    cy.get('.modal-toast').click(); 
+    
+    cy.get('.modal-delete').click();
 
 
 });
